@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> Sum of Odd Integers </title>
+    <script>
+    /* Input: An integer of the user's choice.
+     * Processing: Add all the odd numbers between 1 and the number
+     *    entered by the user.
+     * Output: Output the total.
+     */
+
+     function addOdd () {
+      var n = parseFloat(document.getElementById("input1").value);
+      var sum = 0
+
+      for (var start = 0; start <= n; start++) {
+        if (start%2 == 1) {
+          sum += start;
+        }
+      }
+        document.getElementById('outputDiv').innerHTML = sum;
+     }
+
+    </script>
+  </head>
+
+  <body>
+    Please enter any number: <input type="text" id="input1"><br>
+    <button type="button" onclick="addOdd()">Click</button> <br>
+    The sum of all the odd integers is: <div id="outputDiv"></div>
+  </body>
+</html>
